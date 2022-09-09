@@ -1,3 +1,5 @@
+
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/calcuttin/MerakiAutoRotatePSK)
 # MerakiAutoRotatePSK
 
 This python script is my first one i have done and doing it with Meraki API was a great experience. I took alot of the inspiration from this commmunity post [Automatic rotating PSK for wireless](https://community.meraki.com/t5/Wireless-LAN/Automatic-rotating-PSK-for-wireless/m-p/65991)
@@ -28,7 +30,7 @@ I hope this code helps you solve a problem in your environment.
 
 ## License 
 
-## MIT License
+### MIT License
 
 Copyright (c) [2022] [Nicholas Calcutti]
 
@@ -49,3 +51,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> bc37ed0c98013d13f74e6e4bc2655cbca86e50bf
