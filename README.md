@@ -1,11 +1,12 @@
 # MerakiAutoRotatePSK
-<<<<<<< HEAD
 
 This python script is my first one i have done and doing it with Meraki API was a great experience. I took alot of the inspiration from this commmunity post [Automatic rotating PSK for wireless](https://community.meraki.com/t5/Wireless-LAN/Automatic-rotating-PSK-for-wireless/m-p/65991)
 BrechtSchamp did an amazing job with the script and it was about as turn key a solution as you can get. Some main points on this script is that it assumes you know your organization ID and Network ID for your Meraki Environment. How i got my org ID was by accident on sandbox, here is the link i used [Get-Oraganizations](https://developer.cisco.com/meraki/api-v1/#!get-organizations)
 
 1. Create Meraki API key for your user in Meraki Dashboard [Meraki API Overview](https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API)
-2. Get your Org ID if you dont know it [Get-Oraganizations](https://developer.cisco.com/meraki/api-v1/#!get-organizations).
+2. Get your Org ID if you dont know it [Get-Oraganizations](https://developer.cisco.com/meraki/api-v1/#!get-organizations). Here is another way of getting orgID https://documenter.getpostman.com/view/897512/SzYXYfmJ#5ac4bfa9-de2b-4fc9-b242-514914cd6a11 
+    Run this in your browser after you logged into the dashBoard https://api.meraki.com/api/v1/organizations 
+    img- screenshot of executed code
 3. Get the Network ID of the network you want to use, [Get Networks](https://developer.cisco.com/meraki/api-v1/#!get-organization-networks), I had a template and used this to get the template Network ID.
 4. Copy and paste this code into Visual Studio.
 5. Import the Libraries needed on top.
@@ -48,8 +49,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-=======
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/calcuttin/MerakiAutoRotatePSK)
-
-Meraki Auto rotate psk on SSID and email out new password with QRcode
->>>>>>> f75932131d12217c0d739a15e1ca5e484980ed25
