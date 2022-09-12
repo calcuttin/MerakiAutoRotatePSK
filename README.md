@@ -10,12 +10,14 @@ Below is an example of the Always on Dev-Net Sandbox environment. As you can see
 <img width="1710" alt="Screen Shot 2022-09-09 at 4 17 35 PM" src="https://user-images.githubusercontent.com/20007352/189436210-b782095f-e754-4421-90ac-9ed01cbd126d.png">
 2. Get your Org ID if you dont know it [Get-Oraganizations](https://developer.cisco.com/meraki/api-v1/#!get-organizations). Here is another way of getting orgID https://documenter.getpostman.com/view/897512/SzYXYfmJ#5ac4bfa9-de2b-4fc9-b242-514914cd6a11 
     <img width="1459" alt="Postman get organizations" src="https://user-images.githubusercontent.com/20007352/189436004-c3078852-02a4-40d1-9560-cdf3cd1a43f5.png">
-    Run this in your browser after you logged into the dashBoard https://api.meraki.com/api/v1/organizations 
+    Run this in your browser after you logged into the dashBoard [link to API Call](https://api.meraki.com/api/v1/organizations) 
     <img width="1708" alt="API in Browser" src="https://user-images.githubusercontent.com/20007352/189435894-aa45ca03-926c-40ad-8743-ff125f7bca8b.png">
 3. Get the Network ID of the network you want to use, [Get Networks](https://developer.cisco.com/meraki/api-v1/#!get-organization-networks)
 <img width="1396" alt="Screenshot of get Organizations networks API on dev-net" src="https://user-images.githubusercontent.com/20007352/189436592-52d64dfc-d898-4a0e-b805-c424de9b34a5.png">
-4. Copy and paste this code into Visual Studio. Here you can see i have my python virtual envionment setup in the project. i suggest to do the same, here is a link [Python Virtual Environments] https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
+4. Copy and paste this code into Visual Studio. Here you can see i have my python virtual envionment setup in the project. i suggest to do the same, here is a link [Python Virtual Environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
 <img width="1301" alt="Screenshot of users VSCODE" src="https://user-images.githubusercontent.com/20007352/189437055-19b364f8-6e9a-4888-98d7-89c0f59a3e96.png">
+
+Snippet of code is below: 
 
  ```python
  import requests
@@ -28,9 +30,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 import qrcode 
 #input path for QRcode image
+#below "" equals to have the QR photo stores in the main directory of code base.
 image_paths = [""]
 
-api_key = "e" # enter your meraki api key here
+api_key = "" # enter your meraki api key here
 network_id = "" # enter the network id of the network you want to change here
 ssid_number = 0 # enter the number of the ssid you want to change here 0 - 14
 password_length = 15  # enter the desired length of the new PSK min 8 max 63
@@ -125,16 +128,16 @@ if set_new_psk(new_psk) == 200:
 ```
 
 5. Import the Libraries needed on top.
-    (See requirements.txt)
+    (See [requirements.txt](requirements.txt))
 
-6. Fill out the obejcts under the import section. **Note** SSIDs are number start with 0 ( learned that the hard way )
-
-7. In the img on line 53 input the SSID for the QR code and Encryption. Reference[QRcode info in Wikipedia](https://en.wikipedia.org/wiki/QR_code)
+6. Fill out the obejcts under the import section. **Note** SSIDs are number start with 0
+7. In the img on line 53 input the SSID for the QR code and Encryption. Reference [QRcode info in Wikipedia](https://en.wikipedia.org/wiki/QR_code)
 <img width="714" alt="image" src="https://user-images.githubusercontent.com/20007352/189437688-1349313b-f59a-4313-ae7a-fafbdb4626f1.png">
 
 8. Next look at the email bodies, there are email types plain text and HTML. I recommend editing as needed the HTML body to brand it to your needs. 
 
 9. Line 100 you have the SMTP server, in this example i used gmail as a proof of concept for the project but change as needed. 
+
 ```python
    context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
